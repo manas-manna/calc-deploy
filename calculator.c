@@ -22,7 +22,7 @@ int main() {
         printf("3. Natural Logarithm (ln(x))\n");
         printf("4. Power (xʸ)\n");
         printf("5. Exit\n");
-        printf("Enter your choice: "); 
+        printf("Please Enter your choice: "); 
         fflush(stdout); 
 
         scanf("%d", &choice);

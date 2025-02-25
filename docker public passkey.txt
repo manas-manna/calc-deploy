@@ -1,5 +1,0 @@
-docker public passkey: DA416BB9C48E92BC3EEF77ED48DA6D03CF695BA3
-
-password: passkey
-
-github pass: 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

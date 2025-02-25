@@ -14,20 +14,22 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'gcc -o calculator scientific_calculator.c -lm'
+                sh 'gcc -o calculator calculator.c -lm'
             }
         }
 
         stage('Test') {
             steps {
-                sh './calculator'  // Add test cases here if needed
+                sh './calculator'  // Modify this if needed
             }
         }
 
         stage('Docker Build & Push') {
             steps {
                 sh 'docker build -t $DOCKER_IMAGE .'
-                sh 'docker login -u manasmann -p passkey'
+                withCredentials([string(credentialsId: 'docker-password', variable: 'DOCKER_PASS')]) {
+                    sh 'echo $DOCKER_PASS | docker login -u manasmann --password-stdin'
+                }
                 sh 'docker push $DOCKER_IMAGE'
             }
         }
@@ -39,3 +41,4 @@ pipeline {
         }
     }
 }
+

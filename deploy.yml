@@ -1,0 +1,14 @@
+- name: Deploy Scientific Calculator
+  hosts: remote_server
+  become: yes
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Pull Docker Image
+      command: docker pull manasmann/scientific-calculator:v1
+
+    - name: Run Docker Container
+      command: docker run --rm -it manasmann/scientific-calculator:v1

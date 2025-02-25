@@ -1,0 +1,1 @@
+echo -e "1\n25\n5" > input.txt

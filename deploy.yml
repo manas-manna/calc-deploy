@@ -10,5 +10,5 @@
       ignore_errors: yes  # Ignore errors if the container does not exist
 
     - name: Run the Docker container
-      command: docker run --rm --name scientific-calculator-container manasmann/scientific-calculator:v1
+      command: echo "5" | docker run --rm --name scientific-calculator-container manasmann/scientific-calculator:v1
 

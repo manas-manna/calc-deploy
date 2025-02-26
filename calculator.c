@@ -12,6 +12,8 @@ long long factorial(int n) {
 }
 
 int main() {
+    setbuf(stdout, NULL);  // ✅ Makes stdout unbuffered (Fixes Docker issue)
+    
     int choice;
     double x, y;
 
@@ -22,31 +24,28 @@ int main() {
         printf("3. Natural Logarithm (ln(x))\n");
         printf("4. Power (xʸ)\n");
         printf("5. Exit\n");
-        printf("Enter your choice: "); 
-        fflush(stdout); 
+        printf("Enter your choice: ");
 
-        // Ensure valid input
+        // Read choice input and validate
         if (scanf("%d", &choice) != 1) {
+            printf("Invalid input! Please enter a number between 1-5.\n");
             while (getchar() != '\n'); // Clear input buffer
-            printf("Invalid input! Please enter a valid choice.\n");
             continue;
         }
-        
+
         switch (choice) {
             case 1:
                 printf("Enter number: ");
-                fflush(stdout);
-                if (scanf("%lf", &x) != 1) {
-                    printf("Invalid input!\n");
+                if (scanf("%lf", &x) != 1 || x < 0) {
+                    printf("Invalid input! Enter a non-negative number.\n");
                     while (getchar() != '\n'); // Clear buffer
                     continue;
                 }
                 printf("Result: %.2lf\n", sqrt(x));
                 break;
-            
+
             case 2:
                 printf("Enter a non-negative integer: ");
-                fflush(stdout);
                 int num;
                 if (scanf("%d", &num) != 1 || num < 0) {
                     printf("Invalid input! Enter a non-negative integer.\n");
@@ -55,10 +54,9 @@ int main() {
                 }
                 printf("Result: %lld\n", factorial(num));
                 break;
-            
+
             case 3:
                 printf("Enter number: ");
-                fflush(stdout);
                 if (scanf("%lf", &x) != 1 || x <= 0) {
                     printf("Invalid input! Enter a positive number.\n");
                     while (getchar() != '\n'); // Clear buffer
@@ -66,17 +64,15 @@ int main() {
                 }
                 printf("Result: %.2lf\n", log(x));
                 break;
-            
+
             case 4:
                 printf("Enter base (x): ");
-                fflush(stdout);
                 if (scanf("%lf", &x) != 1) {
                     printf("Invalid input!\n");
                     while (getchar() != '\n'); // Clear buffer
                     continue;
                 }
                 printf("Enter exponent (y): ");
-                fflush(stdout);
                 if (scanf("%lf", &y) != 1) {
                     printf("Invalid input!\n");
                     while (getchar() != '\n'); // Clear buffer
@@ -84,11 +80,11 @@ int main() {
                 }
                 printf("Result: %.2lf\n", pow(x, y));
                 break;
-            
+
             case 5:
                 printf("Exiting calculator.\n");
                 return 0;
-            
+
             default:
                 printf("Invalid choice! Please enter a number between 1-5.\n");
         }

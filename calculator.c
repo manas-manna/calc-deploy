@@ -24,7 +24,7 @@ int main() {
         printf("3. Natural Logarithm (ln(x))\n");
         printf("4. Power (xʸ)\n");
         printf("5. Exit\n");
-        printf("Enter your choice: ");
+        printf("Please enter your choice: ");
 
         // Read choice input and validate
         if (scanf("%d", &choice) != 1) {

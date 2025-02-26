@@ -64,7 +64,7 @@ int main() {
                 }
                 printf("Result: %.2lf\n", log(x));
                 break;
-s
+
             case 4:
                 printf("Enter base (x): ");
                 if (scanf("%lf", &x) != 1) {

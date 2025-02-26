@@ -16,7 +16,7 @@ int main() {
     double x, y;
 
     while (1) {
-        printf("\nScientific Calculator\n");
+        printf("\nScientific Calculator in Progress\n");
         printf("1. Square Root (√x)\n");
         printf("2. Factorial (x!)\n");
         printf("3. Natural Logarithm (ln(x))\n");

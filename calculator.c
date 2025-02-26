@@ -16,13 +16,13 @@ int main() {
     double x, y;
 
     while (1) {
-        printf("\nScientific Calculator in Progress\n");
+        printf("\nScientific Calculator...\n");
         printf("1. Square Root (√x)\n");
         printf("2. Factorial (x!)\n");
         printf("3. Natural Logarithm (ln(x))\n");
         printf("4. Power (xʸ)\n");
         printf("5. Exit\n");
-        printf("Please Enter your choice: "); 
+        printf("Enter your choice: "); 
         fflush(stdout); 
 
         // Ensure valid input

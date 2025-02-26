@@ -25,13 +25,22 @@ int main() {
         printf("Please Enter your choice: "); 
         fflush(stdout); 
 
-        scanf("%d", &choice);
+        // Ensure valid input
+        if (scanf("%d", &choice) != 1) {
+            while (getchar() != '\n'); // Clear input buffer
+            printf("Invalid input! Please enter a valid choice.\n");
+            continue;
+        }
         
         switch (choice) {
             case 1:
                 printf("Enter number: ");
                 fflush(stdout);
-                scanf("%lf", &x);
+                if (scanf("%lf", &x) != 1) {
+                    printf("Invalid input!\n");
+                    while (getchar() != '\n'); // Clear buffer
+                    continue;
+                }
                 printf("Result: %.2lf\n", sqrt(x));
                 break;
             
@@ -39,24 +48,40 @@ int main() {
                 printf("Enter a non-negative integer: ");
                 fflush(stdout);
                 int num;
-                scanf("%d", &num);
+                if (scanf("%d", &num) != 1 || num < 0) {
+                    printf("Invalid input! Enter a non-negative integer.\n");
+                    while (getchar() != '\n'); // Clear buffer
+                    continue;
+                }
                 printf("Result: %lld\n", factorial(num));
                 break;
             
             case 3:
                 printf("Enter number: ");
                 fflush(stdout);
-                scanf("%lf", &x);
+                if (scanf("%lf", &x) != 1 || x <= 0) {
+                    printf("Invalid input! Enter a positive number.\n");
+                    while (getchar() != '\n'); // Clear buffer
+                    continue;
+                }
                 printf("Result: %.2lf\n", log(x));
                 break;
             
             case 4:
                 printf("Enter base (x): ");
                 fflush(stdout);
-                scanf("%lf", &x);
+                if (scanf("%lf", &x) != 1) {
+                    printf("Invalid input!\n");
+                    while (getchar() != '\n'); // Clear buffer
+                    continue;
+                }
                 printf("Enter exponent (y): ");
                 fflush(stdout);
-                scanf("%lf", &y);
+                if (scanf("%lf", &y) != 1) {
+                    printf("Invalid input!\n");
+                    while (getchar() != '\n'); // Clear buffer
+                    continue;
+                }
                 printf("Result: %.2lf\n", pow(x, y));
                 break;
             

@@ -28,7 +28,7 @@ int main() {
 
         // Read choice input and validate
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid input! Please enter a number between 1-5.\n");
+            printf("Invalid input Please enter a number between 1-5.\n");
             while (getchar() != '\n'); // Clear input buffer
             continue;
         }

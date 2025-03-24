@@ -5,7 +5,7 @@ Scientific Calculator...
 3. Natural Logarithm
 4. Power
 5. Exit
-Enter your choice: Enter a non-negative integer: Result: 120
+Please enter your choice: Enter a non-negative integer: Result: 120
 
 Scientific Calculator...
 1. Square Root
@@ -13,4 +13,4 @@ Scientific Calculator...
 3. Natural Logarithm
 4. Power
 5. Exit
-Enter your choice: Exiting calculator.
+Please enter your choice: Exiting calculator.

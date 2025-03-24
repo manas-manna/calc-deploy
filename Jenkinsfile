@@ -20,7 +20,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './calculator < testcase.txt'
+                sh './calculator < testcase.txt > output.txt'
+        	sh 'cmp -s output.txt expected_output.txt || (echo "Test failed!" && exit 1)'
             }
         }
 

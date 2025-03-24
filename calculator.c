@@ -19,10 +19,10 @@ int main() {
 
     while (1) {
         printf("\nScientific Calculator...\n");
-        printf("1. Square Root (√x)\n");
-        printf("2. Factorial (x!)\n");
-        printf("3. Natural Logarithm (ln(x))\n");
-        printf("4. Power (xʸ)\n");
+        printf("1. Square Root\n");
+        printf("2. Factorial\n");
+        printf("3. Natural Logarithm\n");
+        printf("4. Power\n");
         printf("5. Exit\n");
         printf("Please enter your choice: ");
 

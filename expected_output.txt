@@ -1,16 +1,16 @@
 
 Scientific Calculator...
-1. Square Root (√x)
-2. Factorial (x!)
-3. Natural Logarithm (ln(x))
-4. Power (xʸ)
+1. Square Root
+2. Factorial
+3. Natural Logarithm
+4. Power
 5. Exit
 Enter your choice: Enter a non-negative integer: Result: 120
 
 Scientific Calculator...
-1. Square Root (√x)
-2. Factorial (x!)
-3. Natural Logarithm (ln(x))
-4. Power (xʸ)
+1. Square Root
+2. Factorial
+3. Natural Logarithm
+4. Power
 5. Exit
 Enter your choice: Exiting calculator.
